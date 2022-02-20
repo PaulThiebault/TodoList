@@ -1,0 +1,29 @@
+html {
+    font-family: fantasy;
+}
+
+.static {
+    width: 222px;
+    padding: 8px;
+    border: 2px solid black;
+    border-radius: 8px;
+    background-color: aliceblue;
+    align-content: center;
+    justify-content: center;
+}
+
+.todos {
+    padding-bottom: 5px;
+}
+
+input {
+    margin-bottom: 8px;
+}
+
+.buttons {
+    margin-bottom: 5px;
+}
+
+button {
+    margin-inline-end: 2px;
+}
