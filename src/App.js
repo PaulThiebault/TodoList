@@ -25,6 +25,17 @@ function App() {
     setTodos(newTodos)
   }
 
+  function handleEnterTodo(e) {
+    const name = todoNameRef.current.value
+    if (name === '') return
+    if (e.key === 'Enter') {
+      setTodos(PrevTodos => {
+        return [...PrevTodos, { id: uuidv4(), name: name, complete: false}]
+      })
+      todoNameRef.current.value = null
+    }
+  }
+
   function handleAddTodo(e) {
     const name = todoNameRef.current.value
     if (name === '') return
@@ -43,7 +54,7 @@ function App() {
     <>
       <div class="todos"><TodoList todos={todos} toggleTodo={toggleTodo} /></div>
       <div class="static">
-        <input ref={todoNameRef} type="text" />
+        <input ref={todoNameRef} type="text" onKeyPress={handleEnterTodo} />
         <div class="buttons">
           <button onClick={handleAddTodo}>Add ToDo</button>
           <button onClick={handleClearTodos}>Clear Completed ToDos</button>
