@@ -27,3 +27,8 @@ input {
 button {
     margin-inline-end: 2px;
 }
+
+input {
+    border-radius: 5px;
+    align-self: center;
+}
