@@ -1,4 +1,4 @@
-A simple TodoList in React\n
+A simple TodoList in React
 You can:
  - Add some todos
  - Check them
